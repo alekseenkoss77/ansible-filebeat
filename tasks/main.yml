@@ -8,11 +8,12 @@
 - name: Download filebeat
   get_url: 
     url="{{ filebeat_url }}"
-    dest="~/{{ filebeat_pkg_name }}.deb"
+    dest="/opt/{{ filebeat_pkg_name }}.deb"
+  sudo: true
   when: filebeat_check_deb.rc == 1
 
 - name: Install my_package
-  apt: deb="~/{{ filebeat_pkg_name }}.deb"
+  apt: deb="/opt/{{ filebeat_pkg_name }}.deb"
   sudo: true
   when: filebeat_check_deb.rc == 1
 
