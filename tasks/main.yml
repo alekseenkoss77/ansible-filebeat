@@ -21,6 +21,5 @@
   copy:
     src: "{{ filebeat_yml_src }}"
     dest: "{{ filebeat_yml_dest }}"
-    sudo: yes
   notify:
     - restart filebeat
