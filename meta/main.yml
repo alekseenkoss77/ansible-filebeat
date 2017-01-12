@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Segei Alekseenko
-  description: 
+  description: "Small role for filebeat"
   company: Teachbase
   license: BSD
   min_ansible_version: 1.2
